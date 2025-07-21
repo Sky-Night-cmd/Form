@@ -1,139 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Name and Address</title>
+    <meta charset="UTF-8">
+    <title>CiviCRM Form</title>
 </head>
+
 <body>
 
-<form action="#">
-    <fieldset>
-        <legend><b>Name and Address</b></legend>
+    <form action="#">
+        <fieldset>
+            <legend><strong>Name and Address</strong></legend>
 
+            <table cellspacing="10">
+                <!-- CiviCRM Usage -->
+                <tr>
+                    <td><label>Do you use CiviCRM?</label></td>
+                    <td>
+                        <input type="radio" name="use_civicrm" id="use_yes" value="yes">
+                        <label for="use_yes">Yes</label>
+                        <input type="radio" name="use_civicrm" id="use_no" value="no">
+                        <label for="use_no">No</label>
+                        (<a href="#">unselect</a>)
+                    </td>
+                </tr>
+
+                <!-- CiviCRM Duration -->
+                <tr>
+                    <td><label for="duration">How long have you been using CiviCRM?</label></td>
+                    <td>
+                        <select name="duration" id="duration">
+                            <option value="">- select -</option>
+                            <option>Less than 1 year</option>
+                            <option>1–3 years</option>
+                            <option>3–5 years</option>
+                            <option>More than 5 years</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- CMS -->
+                <tr>
+                    <td><label for="cms">Which CMS do you use?</label></td>
+                    <td>
+                        <select name="cms" id="cms">
+                            <option value="">- select -</option>
+                            <option>WordPress</option>
+                            <option>Drupal</option>
+                            <option>Joomla</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Skill Set -->
+                <tr>
+                    <td><label for="skills">Your skill set</label></td>
+                    <td>
+                        <select name="skills" id="skills">
+                            <option value="">- select -</option>
+                            <option>Developer</option>
+                            <option>Site Admin</option>
+                            <option>End User</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Email -->
+                <tr>
+                    <td><label for="email">Email *</label></td>
+                    <td><input type="email" name="email" id="email" required></td>
+                </tr>
+
+                <!-- First Name -->
+                <tr>
+                    <td><label for="first_name">First Name *</label></td>
+                    <td><input type="text" name="first_name" id="first_name" required></td>
+                </tr>
+
+                <!-- Last Name -->
+                <tr>
+                    <td><label for="last_name">Last Name *</label></td>
+                    <td><input type="text" name="last_name" id="last_name" required></td>
+                </tr>
+
+                <!-- Note -->
+                <tr>
+                    <td></td>
+                    <td><small>First and last name will be shared with other visitors to the site.</small></td>
+                </tr>
+
+                <!-- Address -->
+                <tr>
+                    <td><label for="street">Street Address (Home)</label></td>
+                    <td><input type="text" name="street" id="street"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="city">City (Home)</label></td>
+                    <td><input type="text" name="city" id="city"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="postal_code">Postal Code (Home)</label></td>
+                    <td><input type="text" name="postal_code" id="postal_code"></td>
+                </tr>
+
+                <!-- Country -->
+                <tr>
+                    <td><label for="country">Country (Home)</label></td>
+                    <td>
+                        <select name="country" id="country">
+                            <option>United States</option>
+                            <option>Pakistan</option>
+                            <option>India</option>
+                            <option>Canada</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Note -->
+                <tr>
+                    <td></td>
+                    <td><small>Your state/province and country of residence will be shared with others so folks can find
+                            others in their community.</small></td>
+                </tr>
+
+                <!-- State -->
+                <tr>
+                    <td><label for="state">State (Home)</label></td>
+                    <td>
+                        <select name="state" id="state">
+                            <option value="">- select -</option>
+                            <option>Punjab</option>
+                            <option>Sindh</option>
+                            <option>KPK</option>
+                            <option>Balochistan</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- Submit Buttons -->
+        <br>
         <table>
             <tr>
-                <td>Do you use CiviCRM?</td>
                 <td>
-                    <input type="radio" name="use_civicrm" value="yes"> Yes
-                    <input type="radio" name="use_civicrm" value="no"> No
-                    (<a href="#">unselect</a>)
+                    <input type="submit" value="Save">
+                    <input type="reset" value="Cancel">
                 </td>
             </tr>
-
-            <tr>
-                <td>How long have you been using CiviCRM?</td>
-                <td>
-                    <select>
-                        <option>- select -</option>
-                        <option>Less than 1 year</option>
-                        <option>1–3 years</option>
-                        <option>3–5 years</option>
-                        <option>More than 5 years</option>
-                    </select>
-                </td>
-            </tr>
-
-            <tr>
-                <td>Which CMS do you use?</td>
-                <td>
-                    <select>
-                        <option>- select -</option>
-                        <option>WordPress</option>
-                        <option>Drupal</option>
-                        <option>Joomla</option>
-                        <option>Other</option>
-                    </select>
-                </td>
-            </tr>
-
-            <tr>
-                <td>Your skill set</td>
-                <td>
-                    <select>
-                        <option>- select -</option>
-                        <option>Developer</option>
-                        <option>Site Admin</option>
-                        <option>End User</option>
-                    </select>
-                </td>
-            </tr>
-
-            <tr>
-                <td>Email *</td>
-                <td><input type="email" name="email" required></td>
-            </tr>
-
-            <tr>
-                <td>First Name *</td>
-                <td><input type="text" name="first_name" required></td>
-            </tr>
-
-            <tr>
-                <td>Last Name *</td>
-                <td><input type="text" name="last_name" required></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td>First and last name will be shared with other visitors to the site.</td>
-            </tr>
-
-            <tr>
-                <td>Street Address (Home)</td>
-                <td><input type="text" name="street"></td>
-            </tr>
-
-            <tr>
-                <td>City (Home)</td>
-                <td><input type="text" name="city"></td>
-            </tr>
-
-            <tr>
-                <td>Postal Code (Home)</td>
-                <td><input type="text" name="postal_code"></td>
-            </tr>
-
-            <tr>
-                <td>Country (Home)</td>
-                <td>
-                    <select>
-                        <option>United States</option>
-                        <option>Pakistan</option>
-                        <option>India</option>
-                        <option>Canada</option>
-                    </select>
-                </td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td>Your state/province and country of residence will be shared with others so folks can find others in their community.</td>
-            </tr>
-
-            <tr>
-                <td>State (Home)</td>
-                <td>
-                    <select>
-                        <option>- select -</option>
-                        <option>Punjab</option>
-                        <option>Sindh</option>
-                        <option>KPK</option>
-                        <option>Balochistan</option>
-                    </select>
-                </td>
-            </tr>
-
-
         </table>
-    </fieldset>
-    <table>
-        <tr>
-            <td>
-                <input type="submit" value="Save">
-                <input type="reset" value="Cancel">
-            </td>
-        </tr>
-    </table>
-</form>
+
+    </form>
 
 </body>
+
 </html>
